@@ -39,6 +39,8 @@
 /*                                                                       */
 /*************************************************************************/
 
+#ifdef PLATFORM_WINCE
+
 #include <windows.h>
 #include <string.h>
 #include <stdarg.h>
@@ -269,3 +271,5 @@ int cst_free_part_file(cst_filemap *fmap)
     cst_free(fmap);
     return 0;
 }
+
+#endif

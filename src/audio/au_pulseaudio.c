@@ -41,6 +41,8 @@
 /*                                                                       */
 /*************************************************************************/
 
+#ifdef PLATFORM_UNIX
+
 #include "cst_string.h"
 #include "cst_wave.h"
 #include "cst_audio.h"
@@ -151,3 +153,4 @@ int audio_drain_pulseaudio(cst_audiodev *ad)
     return err;
 }
 
+#endif

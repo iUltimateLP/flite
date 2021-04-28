@@ -40,6 +40,8 @@
 /*                                                                       */
 /*************************************************************************/
 
+#ifdef PLATFORM_PALM
+
 #include "cst_file.h"
 #include "cst_error.h"
 #include "cst_alloc.h"
@@ -305,3 +307,5 @@ int cst_sprintf(char *s, const char *fmt, ...)
 
     return count;
 }
+
+#endif

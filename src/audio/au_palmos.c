@@ -38,6 +38,8 @@
 /*                                                                       */
 /*************************************************************************/
 
+#ifdef PLATFORM_PALM
+
 #include "cst_file.h"
 #include <stdlib.h>
 #include <sys/types.h>
@@ -162,3 +164,5 @@ int audio_drain_palmos(cst_audiodev *ad)
 /*    return ioctl((int)ad->platform_data, SNDCTL_DSP_RESET, NULL); */
 	return 0;
 }
+
+#endif

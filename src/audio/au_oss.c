@@ -40,6 +40,8 @@
 /*                                                                       */
 /*************************************************************************/
 
+#ifdef PLATFORM_UNIX
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -198,3 +200,5 @@ int audio_drain_oss(cst_audiodev *ad)
 {
     return ioctl((int)ad->platform_data, SNDCTL_DSP_RESET, NULL);
 }
+
+#endif

@@ -41,6 +41,8 @@
 /*  (apparent?) memory leaks                                             */
 /*************************************************************************/
 
+#ifdef PLATFORM_UNIX
+
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/types.h>
@@ -335,3 +337,5 @@ int audio_drain_alsa(cst_audiodev *ad)
     }
     return result;
 }
+
+#endif
