@@ -40,6 +40,10 @@
 #ifndef _CST_AUDIO_H__
 #define _CST_AUDIO_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif /* __cplusplus */
+
 #include "cst_wave.h"
 #include "cst_hrg.h"
 
@@ -119,5 +123,9 @@ typedef int (*cst_audio_stream_callback)(const cst_wave *w,int start,int size,
 /* An example audio streaming callback function src/audio/au_streaming.c */
 int audio_stream_chunk(const cst_wave *w, int start, int size, 
                        int last, cst_audio_streaming_info *asi);
+
+#ifdef __cplusplus
+}  /* extern "C" */
+#endif /* __cplusplus */
 
 #endif
