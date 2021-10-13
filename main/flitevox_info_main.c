@@ -40,8 +40,8 @@
 
 #include <stdio.h>
 #include <string.h>
-#include <sys/time.h>
-#include <unistd.h>
+//#include <sys/time.h>
+//#include <unistd.h>
 
 #include "cst_args.h"
 #include "flite.h"

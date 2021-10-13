@@ -5,6 +5,14 @@ VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "flite", "flite.vcxproj", "{99F12C61-C732-40A8-80B1-68000C2709D3}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "flite_voice_info", "flite_voice_info.vcxproj", "{0D78BDC7-95EE-4150-B2C5-8C47B2B04ACD}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cmu_us_kal16", "cmu_us_kal16.vcxproj", "{DB4943FE-9380-4363-B49B-58F68AC1BC8D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libflite-cmulex", "..\lang\cmulex\libflite-cmulex.vcxproj", "{78B2092A-F5B1-456F-BAB1-A172AF5D84E4}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libflite-usenglish", "..\lang\usenglish\libflite-usenglish.vcxproj", "{95BB879F-9B63-488D-B8D7-B16FE92203E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +29,36 @@ Global
 		{99F12C61-C732-40A8-80B1-68000C2709D3}.Release|x64.Build.0 = Release|x64
 		{99F12C61-C732-40A8-80B1-68000C2709D3}.Release|x86.ActiveCfg = Release|Win32
 		{99F12C61-C732-40A8-80B1-68000C2709D3}.Release|x86.Build.0 = Release|Win32
+		{0D78BDC7-95EE-4150-B2C5-8C47B2B04ACD}.Debug|x64.ActiveCfg = Debug|x64
+		{0D78BDC7-95EE-4150-B2C5-8C47B2B04ACD}.Debug|x64.Build.0 = Debug|x64
+		{0D78BDC7-95EE-4150-B2C5-8C47B2B04ACD}.Debug|x86.ActiveCfg = Debug|Win32
+		{0D78BDC7-95EE-4150-B2C5-8C47B2B04ACD}.Debug|x86.Build.0 = Debug|Win32
+		{0D78BDC7-95EE-4150-B2C5-8C47B2B04ACD}.Release|x64.ActiveCfg = Release|x64
+		{0D78BDC7-95EE-4150-B2C5-8C47B2B04ACD}.Release|x64.Build.0 = Release|x64
+		{0D78BDC7-95EE-4150-B2C5-8C47B2B04ACD}.Release|x86.ActiveCfg = Release|Win32
+		{0D78BDC7-95EE-4150-B2C5-8C47B2B04ACD}.Release|x86.Build.0 = Release|Win32
+		{DB4943FE-9380-4363-B49B-58F68AC1BC8D}.Debug|x64.ActiveCfg = Debug|x64
+		{DB4943FE-9380-4363-B49B-58F68AC1BC8D}.Debug|x64.Build.0 = Debug|x64
+		{DB4943FE-9380-4363-B49B-58F68AC1BC8D}.Debug|x86.ActiveCfg = Debug|Win32
+		{DB4943FE-9380-4363-B49B-58F68AC1BC8D}.Debug|x86.Build.0 = Debug|Win32
+		{DB4943FE-9380-4363-B49B-58F68AC1BC8D}.Release|x64.ActiveCfg = Release|x64
+		{DB4943FE-9380-4363-B49B-58F68AC1BC8D}.Release|x64.Build.0 = Release|x64
+		{DB4943FE-9380-4363-B49B-58F68AC1BC8D}.Release|x86.ActiveCfg = Release|Win32
+		{DB4943FE-9380-4363-B49B-58F68AC1BC8D}.Release|x86.Build.0 = Release|Win32
+		{78B2092A-F5B1-456F-BAB1-A172AF5D84E4}.Debug|x64.ActiveCfg = Debug|Win32
+		{78B2092A-F5B1-456F-BAB1-A172AF5D84E4}.Debug|x86.ActiveCfg = Debug|Win32
+		{78B2092A-F5B1-456F-BAB1-A172AF5D84E4}.Debug|x86.Build.0 = Debug|Win32
+		{78B2092A-F5B1-456F-BAB1-A172AF5D84E4}.Release|x64.ActiveCfg = Release|x64
+		{78B2092A-F5B1-456F-BAB1-A172AF5D84E4}.Release|x64.Build.0 = Release|x64
+		{78B2092A-F5B1-456F-BAB1-A172AF5D84E4}.Release|x86.ActiveCfg = Release|Win32
+		{78B2092A-F5B1-456F-BAB1-A172AF5D84E4}.Release|x86.Build.0 = Release|Win32
+		{95BB879F-9B63-488D-B8D7-B16FE92203E9}.Debug|x64.ActiveCfg = Debug|Win32
+		{95BB879F-9B63-488D-B8D7-B16FE92203E9}.Debug|x86.ActiveCfg = Debug|Win32
+		{95BB879F-9B63-488D-B8D7-B16FE92203E9}.Debug|x86.Build.0 = Debug|Win32
+		{95BB879F-9B63-488D-B8D7-B16FE92203E9}.Release|x64.ActiveCfg = Release|x64
+		{95BB879F-9B63-488D-B8D7-B16FE92203E9}.Release|x64.Build.0 = Release|x64
+		{95BB879F-9B63-488D-B8D7-B16FE92203E9}.Release|x86.ActiveCfg = Release|Win32
+		{95BB879F-9B63-488D-B8D7-B16FE92203E9}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

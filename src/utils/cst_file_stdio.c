@@ -37,6 +37,8 @@
 /*                                                                       */
 /*************************************************************************/
 
+#ifndef NEXUS
+
 #include <stdio.h>
 #include <string.h>
 #include <stdarg.h>
@@ -148,3 +150,5 @@ int cst_fclose(cst_file fh)
 {
     return fclose(fh);
 }
+
+#endif

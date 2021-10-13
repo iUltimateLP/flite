@@ -40,6 +40,10 @@
 #ifndef _CST_FEATURES_H__
 #define _CST_FEATURES_H__
 
+#ifdef __cplusplus
+extern "C" {
+#endif /* __cplusplus */
+
 #include "cst_alloc.h"
 #include "cst_val.h"
 #include "cst_string.h"
@@ -98,5 +102,9 @@ int feat_copy_into(const cst_features *from,cst_features *to);
 int feat_link_into(const cst_features *from,cst_features *to);
 /* For debugging */
 int cst_feat_print(cst_file fd,const cst_features *f);
+
+#ifdef __cplusplus
+}  /* extern "C" */
+#endif /* __cplusplus */
 
 #endif

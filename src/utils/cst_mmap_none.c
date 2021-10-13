@@ -36,6 +36,8 @@
 /*                                                                       */
 /*************************************************************************/
 
+#if 0
+
 #include "cst_file.h"
 #include "cst_error.h"
 #include "cst_alloc.h"
@@ -119,3 +121,5 @@ int cst_free_part_file(cst_filemap *fmap)
     cst_free(fmap);
     return 0;
 }
+
+#endif

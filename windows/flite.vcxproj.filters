@@ -192,6 +192,9 @@
     <ClInclude Include="..\src\speech\g72x.h">
       <Filter>Quelldateien\speech</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\nx_file_stdio_hook.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\audio\au_oss.c">
@@ -427,6 +430,9 @@
     </ClCompile>
     <ClCompile Include="..\src\wavesynth\cst_diphone.c">
       <Filter>Quelldateien\wavesynth</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\utils\nx_file_stdio_hook.c">
+      <Filter>Quelldateien\utils</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

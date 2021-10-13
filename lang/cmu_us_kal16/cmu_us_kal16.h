@@ -38,54 +38,23 @@
 /*                                                                       */
 /*************************************************************************/
 
-#include "cmu_us_kal16.h"
-#include "usenglish.h"
-#include "cmu_lex.h"
+#pragma once
 
-cst_voice *register_cmu_us_kal16(const char *voxdir)
-{
-    cst_voice *v;
-    cst_lexicon *lex;
+#ifdef __cplusplus
+extern "C" {
+#endif /* __cplusplus */
 
-    if (cmu_us_kal16_diphone)
-        return cmu_us_kal16_diphone;  /* Already registered */
+#include <string.h>
+#include "flite.h"
+#include "cst_diphone.h"
 
-    v = new_voice();
-    v->name = "kal16";
+extern cst_diphone_db cmu_us_kal16_db;
 
-    /* Sets up language specific parameters in the cmu_us_kal16. */
-    usenglish_init(v);
+__declspec(dllexport) cst_voice* cmu_us_kal16_diphone = NULL;
 
-    feat_set_string(v->features,"name","cmu_us_kal16");
+__declspec(dllexport) cst_voice* register_cmu_us_kal16(const char* voxdir);
+__declspec(dllexport) void unregister_cmu_us_kal16(cst_voice* vox);
 
-    feat_set_float(v->features,"int_f0_target_mean",95.0);
-    feat_set_float(v->features,"int_f0_target_stddev",11.0);
-
-    feat_set_float(v->features,"duration_stretch",1.1); 
-
-    /* Lexicon */
-    lex = cmu_lex_init();
-    feat_set(v->features,"lexicon",lexicon_val(lex));
-    feat_set(v->features,"postlex_func",uttfunc_val(lex->postlex));
-
-    /* Waveform synthesis */
-    feat_set(v->features,"wave_synth_func",uttfunc_val(&diphone_synth));
-    feat_set(v->features,"diphone_db",diphone_db_val(&cmu_us_kal16_db));
-    feat_set_int(v->features,"sample_rate",cmu_us_kal16_db.sts->sample_rate);
-/*    feat_set_string(v->features,"join_type","simple_join"); */
-    feat_set_string(v->features,"join_type","modified_lpc");
-    feat_set_string(v->features,"resynth_type","fixed");
-
-    cmu_us_kal16_diphone = v;
-
-    return cmu_us_kal16_diphone;
-}
-
-void unregister_cmu_us_kal16(cst_voice *vox)
-{
-    if (vox != cmu_us_kal16_diphone)
-	return;
-    delete_voice(vox);
-    cmu_us_kal16_diphone = NULL;
-}
-
+#ifdef __cplusplus
+}  /* extern "C" */
+#endif /* __cplusplus */

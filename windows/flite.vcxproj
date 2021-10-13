@@ -130,7 +130,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;_WIN32_LEAN_AND_MEAN;PLATFORM_WINDOWS;CST_NO_SOCKETS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;_WIN32_LEAN_AND_MEAN;PLATFORM_WINDOWS;CST_NO_SOCKETS;_CRT_SECURE_NO_WARNINGS;NEXUS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <WholeProgramOptimization>false</WholeProgramOptimization>
     </ClCompile>
@@ -183,6 +183,7 @@
     <ClInclude Include="..\include\cst_wchar.h" />
     <ClInclude Include="..\include\flite.h" />
     <ClInclude Include="..\include\flite_version.h" />
+    <ClInclude Include="..\include\nx_file_stdio_hook.h" />
     <ClInclude Include="..\src\audio\native_audio.h" />
     <ClInclude Include="..\src\cg\cst_cg_map.h" />
     <ClInclude Include="..\src\cg\cst_mlpg.h" />
@@ -265,6 +266,7 @@
     <ClCompile Include="..\src\utils\cst_val_const.c" />
     <ClCompile Include="..\src\utils\cst_val_user.c" />
     <ClCompile Include="..\src\utils\cst_wchar.c" />
+    <ClCompile Include="..\src\utils\nx_file_stdio_hook.c" />
     <ClCompile Include="..\src\wavesynth\cst_clunits.c" />
     <ClCompile Include="..\src\wavesynth\cst_diphone.c" />
     <ClCompile Include="..\src\wavesynth\cst_reflpc.c" />
