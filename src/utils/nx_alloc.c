@@ -9,6 +9,8 @@
 
 //#ifdef NEXUS
 #include "nx_alloc.h"
+#include <stdio.h>
+#include <conio.h>
 
 // Needed to have some default declarations of these
 free_t* current_free = NULL;
@@ -20,12 +22,10 @@ void* cst_safe_alloc(int size)
 {
 	if (current_alloc)
 	{
-		printf("cst_safe_alloc proxy\n");
 		return current_alloc(size);
 	}
 	else
 	{
-		printf("cst_safe_alloc internal\n");
 		return cst_safe_alloc_internal(size);
 	}
 }
@@ -34,12 +34,10 @@ void* cst_safe_calloc(int size)
 {
 	if (current_calloc)
 	{
-		printf("cst_safe_calloc proxy\n");
 		return current_calloc(size);
 	}
 	else
 	{
-		printf("cst_safe_calloc internal\n");
 		return cst_safe_calloc_internal(size);
 	}
 }
@@ -48,12 +46,10 @@ void* cst_safe_realloc(void* p, int size)
 {
 	if (current_realloc)
 	{
-		printf("cst_safe_relloc proxy\n");
 		return current_realloc(p, size);
 	}
 	else
 	{
-		printf("cst_safe_relloc internal\n");
 		return cst_safe_realloc_internal(p, size);
 	}
 }
@@ -62,13 +58,11 @@ void cst_free(void* p)
 {
 	if (current_free)
 	{
-		printf("cst_free proxy\n");
-		return current_free(p);
+		current_free(p);
 	}
 	else
 	{
-		printf("cst_free internal\n");
-		return cst_free_internal(p);
+		cst_free_internal(p);
 	}
 }
 
