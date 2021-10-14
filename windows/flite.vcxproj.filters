@@ -195,6 +195,9 @@
     <ClInclude Include="..\include\nx_file_stdio_hook.h">
       <Filter>Headerdateien</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\nx_alloc.h">
+      <Filter>Headerdateien</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\audio\au_oss.c">
@@ -432,6 +435,9 @@
       <Filter>Quelldateien\wavesynth</Filter>
     </ClCompile>
     <ClCompile Include="..\src\utils\nx_file_stdio_hook.c">
+      <Filter>Quelldateien\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\utils\nx_alloc.c">
       <Filter>Quelldateien\utils</Filter>
     </ClCompile>
   </ItemGroup>

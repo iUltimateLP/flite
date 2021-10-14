@@ -40,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -78,11 +78,15 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SolutionDir)..\include;$(IncludePath)</IncludePath>
+    <TargetName>lib$(ProjectName)</TargetName>
+    <OutDir>$(SolutionDir)out\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <TargetName>lib$(ProjectName)</TargetName>
     <IncludePath>$(SolutionDir)..\include;$(IncludePath)</IncludePath>
+    <OutDir>$(SolutionDir)out\$(Platform)\$(Configuration)\</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -116,8 +120,11 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;_WIN32_LEAN_AND_MEAN;PLATFORM_WINDOWS;CST_NO_SOCKETS;_CRT_SECURE_NO_WARNINGS;NEXUS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -183,6 +190,7 @@
     <ClInclude Include="..\include\cst_wchar.h" />
     <ClInclude Include="..\include\flite.h" />
     <ClInclude Include="..\include\flite_version.h" />
+    <ClInclude Include="..\include\nx_alloc.h" />
     <ClInclude Include="..\include\nx_file_stdio_hook.h" />
     <ClInclude Include="..\src\audio\native_audio.h" />
     <ClInclude Include="..\src\cg\cst_cg_map.h" />
@@ -266,6 +274,7 @@
     <ClCompile Include="..\src\utils\cst_val_const.c" />
     <ClCompile Include="..\src\utils\cst_val_user.c" />
     <ClCompile Include="..\src\utils\cst_wchar.c" />
+    <ClCompile Include="..\src\utils\nx_alloc.c" />
     <ClCompile Include="..\src\utils\nx_file_stdio_hook.c" />
     <ClCompile Include="..\src\wavesynth\cst_clunits.c" />
     <ClCompile Include="..\src\wavesynth\cst_diphone.c" />

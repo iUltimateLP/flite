@@ -1,8 +1,0 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(39,5): warning MSB4211: Die Eigenschaft "IntermediateOutputPath" wird zum ersten Mal auf einen Wert festgelegt, doch dieser wurde bereits in "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets (38,5)" verwendet.
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets(29,5): warning MSB4211: Die Eigenschaft "DebugType" wird zum ersten Mal auf einen Wert festgelegt, doch dieser wurde bereits in "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets (28,5)" verwendet.
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(370,5): warning MSB4211: Die Eigenschaft "CleanFile" wird zum ersten Mal auf einen Wert festgelegt, doch dieser wurde bereits in "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets (38,5)" verwendet.
-  cmu_lex_entries.c
-  cmu_lts_model.c
-  cmu_postlex.c
-  Code wird generiert...
-  libflite-cmulex.vcxproj -> G:\Work Projects\Perforce\Nexus_ThirdParty\flite\windows\x64\Release\libflite-cmulex.lib

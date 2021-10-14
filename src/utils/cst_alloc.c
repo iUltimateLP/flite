@@ -37,6 +37,7 @@
 /*  Basic wraparounds for malloc and free                                */
 /*                                                                       */
 /*************************************************************************/
+
 #include "cst_file.h"
 #include "cst_alloc.h"
 #include "cst_error.h"
@@ -66,7 +67,7 @@ void *cst_alloc_cunks[NUM_CHUNKS];
 
 #ifndef CST_USER_MALLOC	/* Define to override cst_safe_alloc, cst_safe_calloc, cst_safe_realloc, cst_free */
 
-void *cst_safe_alloc(int size)
+void *cst_safe_alloc_internal(int size)
 {
     /* returns pointer to memory all set 0 */
     void *p = NULL;
@@ -118,12 +119,12 @@ void *cst_safe_alloc(int size)
     return p;
 }
 
-void *cst_safe_calloc(int size)
+void *cst_safe_calloc_internal(int size)
 {
     return cst_safe_alloc(size);
 }
 
-void *cst_safe_realloc(void *p,int size)
+void *cst_safe_realloc_internal(void *p,int size)
 {
     void *np=0;
 
@@ -153,7 +154,7 @@ void *cst_safe_realloc(void *p,int size)
     return np;
 }
 
-void cst_free(void *p)
+void cst_free_internal(void *p)
 {
     if (p != NULL)
     {
@@ -260,5 +261,3 @@ void cst_local_free(cst_alloc_context ctx, void *p)
 	LocalFree(p);
 }
 #endif
-
-

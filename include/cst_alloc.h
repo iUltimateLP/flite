@@ -52,6 +52,10 @@ void *cst_safe_alloc(int size);
 void *cst_safe_calloc(int size);
 void *cst_safe_realloc(void *p,int size);
 
+void* cst_safe_alloc_internal(int size);
+void* cst_safe_calloc_internal(int size);
+void* cst_safe_realloc_internal(void* p, int size);
+
 /* Allocate on local heap (needed on WinCE for various reasons) */
 #ifdef UNDER_CE
 #include <windows.h>
@@ -78,5 +82,6 @@ typedef void * cst_alloc_context;
 #define cst_realloc(P,TYPE,SIZE) ((TYPE *)cst_safe_realloc((void *)(P),sizeof(TYPE)*(SIZE)))
 
 void cst_free(void *p);
+void cst_free_internal(void *p);
 
 #endif
