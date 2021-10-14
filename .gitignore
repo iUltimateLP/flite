@@ -1,2 +1,6 @@
 *.vs
 windows/x64/*
+windows/out/*
+lang/cmulex/x64/Release/*
+lang/usenglish/x64/Release/*
+*.obj
