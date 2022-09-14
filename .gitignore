@@ -4,3 +4,12 @@ windows/out/*
 lang/cmulex/x64/Release/*
 lang/usenglish/x64/Release/*
 *.obj
+bin
+build
+config/config
+config/system.mak
+config.log
+config.status
+include/flite_version.h
+main/flite_lang_list.c
+main/flite_voice_list.c
